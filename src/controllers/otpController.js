@@ -17,7 +17,7 @@ const sendOTP = async (req, res) => {
     await otpData.save();
 
     await client.messages.create({
-      body: `Your OTP for login verification is: ${otp}\nPlease enter this OTP to complete your authentication.\nThis OTP is valid for 5 minutes.\n\nBest,\nYour Name`,
+      body: `Your OTP for login verification is: ${otp}\nPlease enter this OTP to complete your authentication.\nThis OTP is valid for 5 minutes.\n\nBest,\nKartikey`,
       from: process.env.TWILIO_PHONE_NUMBER,
       to: phoneNumber,
     });
